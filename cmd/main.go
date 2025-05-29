@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"sections_algorithm/internal"
+	"sections_algorithm/internal/function"
 )
 
 func main() {
@@ -38,7 +38,7 @@ func main() {
 		return
 	}
 	n := int(nf)
-	segments := make([]internal.Section, n)
+	segments := make([]function.Section, n)
 
 	for i := 0; i < n; i++ {
 		l, err := readFloat()
@@ -51,9 +51,9 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Ошибка чтения правой границы отрезка %d: %v\n", i+1, err)
 			return
 		}
-		segments[i] = internal.Section{Start: l, End: r}
+		segments[i] = function.Section{Start: l, End: r}
 	}
 
-	result := internal.Min_points_cover(segments)
+	result := function.MinPointsCover(segments)
 	fmt.Println(result)
 }

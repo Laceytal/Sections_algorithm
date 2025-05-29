@@ -1,4 +1,4 @@
-package internal
+package function
 
 import "sort"
 
@@ -7,7 +7,7 @@ type Section struct {
 	End   float64
 }
 
-func Min_points_cover(sections []Section) int {
+func MinPointsCover(sections []Section) int {
 	if len(sections) == 0 {
 		return 0
 	}

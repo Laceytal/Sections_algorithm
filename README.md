@@ -33,7 +33,7 @@ LN RN
 Скомпилировать и запустить программу:
 
 ```bash
-go run main.go input.txt
+go run cmd/main.go input.txt
 ```
 
 ## Описание алгоритма
